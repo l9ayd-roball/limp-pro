@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad | Brillo Hogar</title>
+  <meta name="robots" content="noindex,follow">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0d2b3a"/><path d="M32 10c8 11 14 18 14 27a14 14 0 0 1-28 0c0-9 6-16 14-27z" fill="#f5d547"/><path d="M42 12l1.6 4.4L48 18l-4.4 1.6L42 24l-1.6-4.4L36 18l4.4-1.6z" fill="#fff"/></svg>
+        <span data-site="name">Brillo Hogar</span>
+      </a>
+      <a href="index.html" class="btn btn-small">Volver a la web</a>
+    </div>
+  </header>
+  <main class="legal">
+    <div class="container narrow">
+      <h1>Política de privacidad</h1>
+      <p class="meta">Última actualización: <span id="year"></span></p>
+      <p class="draft">Texto base orientativo. La titular debe revisar que los datos son correctos y, si usa herramientas nuevas (analítica, formularios de terceros, etc.), consultarlo con una gestoría para actualizarlo.</p>
+      <h2>1. Responsable del tratamiento</h2>
+      <ul>
+        <li>Responsable: <span data-site="legalName">[Nombre y apellidos de la titular]</span></li>
+        <li>NIF: <span data-site="nif">[NIF / DNI]</span></li>
+        <li>Domicilio: <span data-site="address">[Dirección completa]</span></li>
+        <li>Contacto: <a data-site-href="mail" data-site="email" href="mailto:hola@brillohogar.es">hola@brillohogar.es</a></li>
+      </ul>
+      <h2>2. Qué datos tratamos y para qué</h2>
+      <p>Tratamos el nombre, el teléfono y el mensaje que nos envías con el formulario o la calculadora, con la única finalidad de responder a tu solicitud y prepararte un presupuesto.</p>
+      <h2>3. Base jurídica</h2>
+      <p>Tu consentimiento (marcas la casilla antes de enviar) y la aplicación de medidas precontractuales a petición tuya.</p>
+      <h2>4. Cómo se envían los datos</h2>
+      <p>Esta web no guarda los datos del formulario en ningún servidor propio. Al pulsar el botón, se abre WhatsApp o tu programa de correo con el mensaje ya escrito y eres tú quien decide enviarlo. Desde ese momento, el mensaje lo gestiona el servicio que hayas elegido (por ejemplo, WhatsApp) bajo sus propias condiciones.</p>
+      <h2>5. Conservación</h2>
+      <p>Conservamos tus datos mientras mantengamos conversación contigo sobre el presupuesto y, si contratas el servicio, durante los plazos que exija la normativa fiscal y contable.</p>
+      <h2>6. Destinatarios</h2>
+      <p>No cedemos tus datos a terceros salvo obligación legal. El alojamiento de la web lo proporciona Netlify, que puede registrar datos técnicos de conexión (como la dirección IP) para el funcionamiento y la seguridad del servicio.</p>
+      <h2>7. Tus derechos</h2>
+      <p>Puedes solicitar el acceso, la rectificación, la supresión, la oposición, la limitación y la portabilidad de tus datos escribiendo a <span data-site="email">hola@brillohogar.es</span>. También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <nav class="footer-links" aria-label="Legal">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="cookies.html">Política de cookies</a>
+      </nav>
+      <p class="copy">© <span id="year2"></span> <span data-site="name">Brillo Hogar</span></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year2").textContent = new Date().getFullYear();</script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

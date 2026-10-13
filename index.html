@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brillo Hogar | Limpieza de hogares, oficinas y fin de obra</title>
+  <meta name="description" content="Limpieza profesional para hogares, oficinas y fin de obra. Calcula tu presupuesto al instante y recibe una oferta cerrada en menos de 24 horas.">
+  <meta name="theme-color" content="#0d2b3a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Brillo Hogar | Limpieza profesional">
+  <meta property="og:description" content="Calcula tu presupuesto al instante. Limpieza de hogares, oficinas y fin de obra.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Datos para Google: sustituye "Tu ciudad" y el teléfono por los reales -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HouseCleaning",
+    "name": "Brillo Hogar",
+    "description": "Limpieza de hogares, oficinas y fin de obra.",
+    "telephone": "+34600000000",
+    "email": "hola@brillohogar.es",
+    "areaServed": "Tu ciudad",
+    "openingHours": "Mo-Sa 08:00-20:00"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Ilustración de la ventana (se reutiliza en el antes/después) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#7fcbec"/><stop offset="1" stop-color="#eaf8fb"/>
+      </linearGradient>
+      <clipPath id="glassclip"><rect x="46" y="46" width="308" height="358"/></clipPath>
+      <filter id="grime" x="0" y="0" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018 0.03" numOctaves="3" seed="4" result="n"/>
+        <feColorMatrix in="n" type="matrix" values="0 0 0 0 .42  0 0 0 0 .36  0 0 0 0 .24  0 0 0 1.7 -.4"/>
+      </filter>
+      <symbol id="scene" viewBox="0 0 400 480">
+        <rect width="400" height="480" fill="#d9ece9"/>
+        <rect x="30" y="30" width="340" height="390" rx="10" fill="#fff" stroke="#0d2b3a" stroke-width="6"/>
+        <rect x="46" y="46" width="308" height="358" fill="url(#sky)"/>
+        <circle cx="285" cy="118" r="34" fill="#f5d547"/>
+        <g fill="#fff" opacity=".92">
+          <ellipse cx="120" cy="110" rx="44" ry="14"/><ellipse cx="146" cy="98" rx="30" ry="14"/>
+          <ellipse cx="250" cy="190" rx="38" ry="11"/>
+        </g>
+        <path d="M46 318c70-38 140 4 210-22s70-6 98 8v100H46z" fill="#7cc4a8"/>
+        <path d="M46 352c80-30 150 10 230-12 40-10 62 0 78 4v60H46z" fill="#4aa58a"/>
+        <rect x="196" y="46" width="8" height="358" fill="#fff" stroke="#0d2b3a" stroke-width="3"/>
+        <rect x="46" y="220" width="308" height="8" fill="#fff" stroke="#0d2b3a" stroke-width="3"/>
+        <rect x="14" y="412" width="372" height="22" rx="4" fill="#fff" stroke="#0d2b3a" stroke-width="4"/>
+        <path d="M296 412l6-40h38l6 40z" fill="#f5d547" stroke="#0d2b3a" stroke-width="3"/>
+        <path d="M321 372c-22-30-30-52-24-76 24 12 32 44 24 76z" fill="#2f8f6b"/>
+        <path d="M321 372c20-28 38-42 38-66-26 10-42 34-38 66z" fill="#26775a"/>
+        <path d="M321 372c-2-30 2-52 12-72" fill="none" stroke="#1d5f48" stroke-width="3"/>
+        <rect x="90" y="440" width="220" height="14" rx="7" fill="#0d2b3a" opacity=".08"/>
+      </symbol>
+      <path id="spark" d="M0-12L3-3 12 0 3 3 0 12-3 3-12 0-3-3z"/>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="#inicio" class="logo" aria-label="Brillo Hogar, inicio">
+        <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0d2b3a"/><path d="M32 10c8 11 14 18 14 27a14 14 0 0 1-28 0c0-9 6-16 14-27z" fill="#f5d547"/><path d="M42 12l1.6 4.4L48 18l-4.4 1.6L42 24l-1.6-4.4L36 18l4.4-1.6z" fill="#fff"/></svg>
+        <span data-site="name">Brillo Hogar</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Cómo trabajo</a>
+        <a href="#presupuesto">Calculadora</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto" class="btn btn-small">Pedir presupuesto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Limpieza que se nota en cuanto abres la puerta</h1>
+          <p class="lead">Limpio hogares, oficinas y obras terminadas con trato directo, horarios que se adaptan a ti y un precio cerrado antes de empezar.</p>
+          <div class="hero-actions">
+            <a href="#presupuesto" class="btn">Calcular mi presupuesto</a>
+            <a href="https://wa.me/34600000000?text=Hola%2C%20quiero%20pedir%20presupuesto%20de%20limpieza" data-site-href="wa" class="btn btn-ghost" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+          <ul class="trust">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Presupuesto cerrado en menos de 24 h</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Si algo no te convence, lo repito sin coste</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Productos suaves con la piel y las mascotas</li>
+          </ul>
+        </div>
+
+        <figure class="pane-wrap">
+          <div class="pane" id="pane">
+            <div class="layer layer-dirty" aria-hidden="true">
+              <svg viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice">
+                <use href="#scene" width="400" height="480"/>
+                <g clip-path="url(#glassclip)">
+                  <rect x="46" y="46" width="308" height="358" fill="#7c7760" opacity=".30"/>
+                  <rect x="46" y="46" width="308" height="358" filter="url(#grime)"/>
+                  <g fill="none" stroke="#5d5a48" stroke-linecap="round" opacity=".38">
+                    <path d="M92 60c4 40-2 80 3 130" stroke-width="3"/>
+                    <path d="M150 60c-3 50 4 90 0 150" stroke-width="2"/>
+                    <path d="M262 232c3 40-3 80 2 130" stroke-width="3"/>
+                    <path d="M318 60c-4 60 3 100-1 160" stroke-width="2"/>
+                  </g>
+                  <g fill="#5d5a48" opacity=".22">
+                    <ellipse cx="120" cy="300" rx="26" ry="34"/><ellipse cx="150" cy="282" rx="8" ry="14"/>
+                    <ellipse cx="248" cy="150" rx="22" ry="28"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="layer layer-clean" aria-hidden="true">
+              <svg viewBox="0 0 400 480" preserveAspectRatio="xMidYMid slice">
+                <use href="#scene" width="400" height="480"/>
+                <g clip-path="url(#glassclip)">
+                  <path d="M118 46h54L96 404H42z" fill="#fff" opacity=".4"/>
+                  <path d="M196 46h18L138 404h-18z" fill="#fff" opacity=".3"/>
+                </g>
+                <g fill="#fff" stroke="#0d2b3a" stroke-width="1.5">
+                  <use href="#spark" transform="translate(96 118) scale(1.1)"/>
+                  <use href="#spark" transform="translate(318 260) scale(.9)"/>
+                  <use href="#spark" transform="translate(150 350) scale(.7)"/>
+                </g>
+              </svg>
+            </div>
+            <span class="tag tag-after">Después</span>
+            <span class="tag tag-before">Antes</span>
+            <span class="pane-line" aria-hidden="true"></span>
+            <span class="pane-knob" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg>
+            </span>
+            <input type="range" min="0" max="100" value="0" step="1" aria-label="Comparar antes y después de la limpieza">
+          </div>
+          <figcaption>Arrastra para ver la diferencia</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-head">
+          <h2>Qué puedo limpiar por ti</h2>
+          <p>Si lo que necesitas no está en la lista, cuéntamelo y lo preparamos a tu medida.</p>
+        </div>
+        <div class="services">
+          <article class="svc">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+            <h3>Limpieza de hogar</h3>
+            <p>Limpieza semanal, quincenal o mensual de todas las estancias, baños y cocina, con el día y la hora que mejor te vayan.</p>
+          </article>
+          <article class="svc">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg>
+            <h3>Oficinas y locales</h3>
+            <p>Espacios de trabajo cuidados, con horario fuera de tu jornada si lo prefieres para que nadie te interrumpa.</p>
+          </article>
+          <article class="svc">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M3 12h18M9 6v6M15 12v6"/></svg>
+            <h3>Fin de obra</h3>
+            <p>Retiro el polvo fino, los restos de pintura y de cemento para que estrenes la casa sin trabajo extra.</p>
+          </article>
+          <article class="svc">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M4 12h16"/></svg>
+            <h3>Cristales y ventanas</h3>
+            <p>Cristales por dentro y por fuera, marcos y persianas, sin marcas ni churretes.</p>
+          </article>
+          <article class="svc">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></svg>
+            <h3>Limpieza a fondo</h3>
+            <p>Para antes de una mudanza o un cambio de inquilino: horno, nevera, azulejos, rincones y todo lo que no se limpia cada semana.</p>
+          </article>
+          <article class="svc">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V9l5-3 5 3v12M13 21V4l8 3v14M7 12h2M7 16h2M16 10h2M16 14h2"/></svg>
+            <h3>Comunidades de vecinos</h3>
+            <p>Portales, escaleras y zonas comunes con un calendario fijo. Presupuesto a medida según el edificio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="section section-glass" id="proceso">
+      <div class="container">
+        <div class="section-head">
+          <h2>De tu mensaje a la casa limpia, en cuatro pasos</h2>
+        </div>
+        <ol class="steps">
+          <li><span class="num">1</span><h3>Me cuentas qué necesitas</h3><p>Por WhatsApp, por teléfono o con la calculadora de abajo.</p></li>
+          <li><span class="num">2</span><h3>Recibes un precio cerrado</h3><p>Claro, sin letra pequeña y en menos de 24 horas.</p></li>
+          <li><span class="num">3</span><h3>Acordamos día y hora</h3><p>Me adapto a tu horario, no al revés.</p></li>
+          <li><span class="num">4</span><h3>Revisas el resultado</h3><p>Si algo no te convence, vuelvo y lo repito sin coste.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CALCULADORA -->
+    <section class="section" id="presupuesto">
+      <div class="container">
+        <div class="section-head">
+          <h2>Calcula tu presupuesto en 20 segundos</h2>
+          <p>Es una estimación para que te hagas una idea. El precio cerrado te lo confirmo yo después de ver tus datos.</p>
+        </div>
+
+        <div class="calc">
+          <form class="calc-form" id="calc" novalidate>
+            <fieldset>
+              <legend>¿Qué necesitas?</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="servicio" value="hogar" checked><span>Hogar</span></label>
+                <label class="chip"><input type="radio" name="servicio" value="oficina"><span>Oficina o local</span></label>
+                <label class="chip"><input type="radio" name="servicio" value="fondo"><span>Limpieza a fondo</span></label>
+                <label class="chip"><input type="radio" name="servicio" value="obra"><span>Fin de obra</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Superficie</legend>
+              <div class="range-row">
+                <input type="range" id="m2" name="m2" min="20" max="300" step="5" value="80" aria-label="Metros cuadrados">
+                <output id="m2out" for="m2">80 m²</output>
+              </div>
+            </fieldset>
+
+            <fieldset id="freqSet">
+              <legend>¿Con qué frecuencia?</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="frecuencia" value="puntual" checked><span>Una vez</span></label>
+                <label class="chip"><input type="radio" name="frecuencia" value="mensual"><span>Mensual</span></label>
+                <label class="chip"><input type="radio" name="frecuencia" value="quincenal"><span>Quincenal</span></label>
+                <label class="chip"><input type="radio" name="frecuencia" value="semanal"><span>Semanal</span></label>
+              </div>
+              <p class="hint" id="freqHint"></p>
+            </fieldset>
+
+            <fieldset>
+              <legend>Extras</legend>
+              <div class="extras">
+                <label class="check-row"><input type="checkbox" name="extra" value="cristales"><span>Cristales interiores y exteriores</span><em data-extra="cristales"></em></label>
+                <label class="check-row"><input type="checkbox" name="extra" value="horno"><span>Horno</span><em data-extra="horno"></em></label>
+                <label class="check-row"><input type="checkbox" name="extra" value="nevera"><span>Nevera</span><em data-extra="nevera"></em></label>
+                <label class="check-row"><input type="checkbox" name="extra" value="balcon"><span>Balcón o terraza</span><em data-extra="balcon"></em></label>
+              </div>
+            </fieldset>
+          </form>
+
+          <aside class="calc-result" aria-live="polite">
+            <p class="res-label">Tu estimación</p>
+            <p class="res-price" id="resPrice">—</p>
+            <p class="res-sub" id="resSub"></p>
+            <ul class="res-list" id="resList"></ul>
+            <a class="btn" id="resWa" href="#contacto" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+            <a class="res-link" id="resForm" href="#contacto">Prefiero rellenar el formulario</a>
+            <p class="res-note" id="resNote"></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- GARANTÍA -->
+    <section class="band">
+      <div class="container band-grid">
+        <h2>Si no brilla, vuelvo y lo repito sin coste</h2>
+        <div>
+          <p>Cuando alguien entra en tu casa o en tu negocio, lo importante es la confianza. Por eso hablas siempre conmigo, sin intermediarios, y sabes quién va a ir y cuánto vas a pagar antes de que empiece el trabajo.</p>
+          <ul class="band-list">
+            <li>Puntualidad y discreción</li>
+            <li>Precio cerrado, sin sorpresas</li>
+            <li>Factura de cada servicio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZONA -->
+    <section class="section" id="zona">
+      <div class="container narrow">
+        <div class="section-head">
+          <h2>Dónde trabajo</h2>
+          <p>Si tu municipio no aparece, escríbeme: puede que también llegue.</p>
+        </div>
+        <ul class="areas" id="areas">
+          <li>Tu ciudad</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--
+      OPINIONES: cuando tengas reseñas REALES de clientes (con su permiso),
+      copia este bloque dentro de una <section class="section section-glass">,
+      sustituye el texto y publícalo. No pongas opiniones inventadas.
+
+      <div class="quotes">
+        <blockquote class="quote"><p>Texto real de la reseña.</p><footer>Nombre, ciudad</footer></blockquote>
+      </div>
+    -->
+
+    <!-- FAQ -->
+    <section class="section section-glass" id="faq">
+      <div class="container narrow">
+        <div class="section-head">
+          <h2>Preguntas frecuentes</h2>
+        </div>
+        <details class="faq">
+          <summary>¿Tengo que tener productos de limpieza en casa?</summary>
+          <p>No hace falta. Llevo mis productos y mi material, aunque puedo usar los tuyos si lo prefieres.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Cómo se calcula el precio?</summary>
+          <p>Depende de los metros, del tipo de limpieza y de la frecuencia. La calculadora de arriba te da una idea; después te envío un precio cerrado.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Qué pasa si algo no me convence?</summary>
+          <p>Me lo dices y vuelvo a repasarlo sin coste.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Dais factura?</summary>
+          <p>Sí, de cada servicio.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Tengo que estar en casa durante la limpieza?</summary>
+          <p>Como prefieras. Podemos acordar cómo entrar y avisarte cuando termine.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Qué datos guardáis de mí?</summary>
+          <p>Solo los que me envías para preparar tu presupuesto. Puedes leer los detalles en la <a href="privacidad.html">política de privacidad</a>.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Pide tu presupuesto sin compromiso</h2>
+          <p>Cuéntame qué necesitas y te respondo en menos de 24 horas.</p>
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+              <a href="tel:+34600000000" data-site-href="tel" data-site="phone">600 000 000</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              <a href="mailto:hola@brillohogar.es" data-site-href="mail" data-site="email">hola@brillohogar.es</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>
+              <span data-site="city">Tu ciudad y alrededores</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span data-site="hours">Lunes a sábado, de 8:00 a 20:00</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <label>Nombre
+            <input type="text" name="nombre" autocomplete="name" placeholder="Tu nombre" required>
+          </label>
+          <label>Teléfono
+            <input type="tel" name="telefono" autocomplete="tel" placeholder="600 000 000" required>
+          </label>
+          <label>Servicio
+            <select name="servicio" required>
+              <option value="">Elige un servicio…</option>
+              <option>Limpieza de hogar</option>
+              <option>Oficina o local</option>
+              <option>Fin de obra</option>
+              <option>Cristales y ventanas</option>
+              <option>Limpieza a fondo</option>
+              <option>Comunidad de vecinos</option>
+            </select>
+          </label>
+          <label>Mensaje
+            <textarea name="mensaje" rows="4" placeholder="Metros, frecuencia, fecha deseada…"></textarea>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="privacidad" required>
+            <span>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn">Enviar por WhatsApp</button>
+            <button type="button" class="btn btn-ghost" id="mailBtn">Enviar por email</button>
+          </div>
+          <p class="form-msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong data-site="name">Brillo Hogar</strong>
+        <p>Limpieza de hogares, oficinas y fin de obra.</p>
+        <p class="small">Esta web no utiliza cookies.</p>
+      </div>
+      <nav class="footer-links" aria-label="Legal">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="cookies.html">Política de cookies</a>
+      </nav>
+      <p class="copy">© <span id="year"></span> <span data-site="name">Brillo Hogar</span>. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp" data-site-href="wa" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20pedir%20presupuesto%20de%20limpieza" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.700 6.700 0 0 1-3.300-2.900c-.2-.4.2-.4.700-1.300.1-.2 0-.3 0-.4l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.200 5.200 5.200 0 0 0 1.100 2.800 11.800 11.800 0 0 0 4.500 4c1.700.7 2.300.8 3.100.7a2.600 2.600 0 0 0 1.700-1.200 2.100 2.100 0 0 0 .1-1.200c0-.1-.2-.2-.5-.3z"/></svg>
+  </a>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

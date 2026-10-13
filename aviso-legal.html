@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aviso legal | Brillo Hogar</title>
+  <meta name="robots" content="noindex,follow">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0d2b3a"/><path d="M32 10c8 11 14 18 14 27a14 14 0 0 1-28 0c0-9 6-16 14-27z" fill="#f5d547"/><path d="M42 12l1.6 4.4L48 18l-4.4 1.6L42 24l-1.6-4.4L36 18l4.4-1.6z" fill="#fff"/></svg>
+        <span data-site="name">Brillo Hogar</span>
+      </a>
+      <a href="index.html" class="btn btn-small">Volver a la web</a>
+    </div>
+  </header>
+  <main class="legal">
+    <div class="container narrow">
+      <h1>Aviso legal</h1>
+      <p class="meta">Última actualización: <span id="year"></span></p>
+      <p class="draft">Texto base orientativo. La titular debe revisar que los datos son correctos y, si usa herramientas nuevas (analítica, formularios de terceros, etc.), consultarlo con una gestoría para actualizarlo.</p>
+      <h2>1. Datos del titular</h2>
+      <p>En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de que este sitio web es titularidad de:</p>
+      <ul>
+        <li>Titular: <span data-site="legalName">[Nombre y apellidos de la titular]</span></li>
+        <li>NIF: <span data-site="nif">[NIF / DNI]</span></li>
+        <li>Domicilio: <span data-site="address">[Dirección completa]</span></li>
+        <li>Correo electrónico: <a data-site-href="mail" data-site="email" href="mailto:hola@brillohogar.es">hola@brillohogar.es</a></li>
+        <li>Teléfono: <span data-site="phone">600 000 000</span></li>
+      </ul>
+      <h2>2. Objeto</h2>
+      <p>Este sitio web ofrece información sobre los servicios de limpieza de <span data-site="name">Brillo Hogar</span> y permite solicitar presupuestos. El acceso es gratuito y supone aceptar estas condiciones.</p>
+      <h2>3. Presupuestos y precios</h2>
+      <p>Los importes que muestra la calculadora son estimaciones orientativas y no constituyen una oferta vinculante. El precio definitivo se comunica por escrito antes de realizar el servicio.</p>
+      <h2>4. Propiedad intelectual</h2>
+      <p>Los textos, el diseño, los logotipos y las imágenes de esta web pertenecen a su titular o se usan con autorización. No pueden copiarse ni reproducirse sin permiso.</p>
+      <h2>5. Responsabilidad</h2>
+      <p>La titular se esfuerza por mantener la información actualizada, pero no garantiza que esté libre de errores ni se hace responsable de los daños derivados de un uso indebido del sitio o de enlaces a páginas de terceros.</p>
+      <h2>6. Legislación aplicable</h2>
+      <p>Estas condiciones se rigen por la legislación española. Para cualquier controversia, las partes se someterán a los juzgados y tribunales que correspondan según la normativa de consumidores y usuarios.</p>
+
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <nav class="footer-links" aria-label="Legal">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="cookies.html">Política de cookies</a>
+      </nav>
+      <p class="copy">© <span id="year2"></span> <span data-site="name">Brillo Hogar</span></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year2").textContent = new Date().getFullYear();</script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
